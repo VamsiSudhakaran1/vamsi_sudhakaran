@@ -27,7 +27,9 @@
     /* Card hover */
     .card { transition: transform .2s ease, box-shadow .2s ease; }
     .card:hover { transform: translateY(-4px); box-shadow: 0 10px 30px -12px rgb(0 0 0 / .35); }
-  </style>
+  .reveal{opacity:0;transform:translateY(12px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.reveal-show{opacity:1;transform:none;}
+</style>
 </head>
 <body class="bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100">
   <!-- Header -->
@@ -72,8 +74,7 @@
   <!-- Hero -->
   <section id="home" class="relative overflow-hidden">
     <div class="max-w-6xl mx-auto px-4 py-20 md:py-28 grid md:grid-cols-2 gap-10 items-center">
-      <div>
-        <p class="uppercase tracking-widest text-xs text-slate-500">Hello, I'm</p>
+      <div data-reveal><p class="uppercase tracking-widest text-xs text-slate-500">Hello, I'm</p>
         <h1 class="text-4xl md:text-6xl font-black leading-tight mt-2">Vamsi Sudhakaran</h1>
         <p class="mt-5 text-lg text-slate-600 dark:text-slate-300 max-w-prose">Principal‑level Data Engineer & Architect (13+ yrs) in Chennai. Ab Initio meta‑programming, PySpark on AWS (S3/EMR/Glue/Redshift), SQL/Unix. Entrepreneurial builder exploring Quant Data Engineering, GPU performance, and creative IPs.</p>
         <div class="mt-6 flex gap-3">
@@ -92,9 +93,9 @@
           </a>
         </div>
       </div>
-      <div class="relative">
+      <div class="relative reveal">
         <div class="aspect-square rounded-3xl bg-gradient-to-br from-cyan-200 to-emerald-200 dark:from-cyan-900/50 dark:to-emerald-900/40 p-2">
-          <img src="https://images.unsplash.com/photo-1526312426976-593c542d0ce1?q=80&w=1200&auto=format&fit=crop" alt="Profile" class="w-full h-full object-cover rounded-2xl"/>
+          <img src="profile.jpg" alt="Vamsi Sudhakaran" class="w-full h-full object-cover rounded-2xl" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1526312426976-593c542d0ce1?q=80&w=1200&auto=format&fit=crop';"/>
         </div>
         <div class="absolute -bottom-5 -left-5 bg-white/70 dark:bg-slate-800/70 backdrop-blur px-4 py-2 rounded-xl text-sm shadow">Chennai • Open to roles & collabs</div>
       </div>
@@ -104,7 +105,7 @@
   <!-- About -->
   <section id="about" class="py-16 md:py-24 border-t border-slate-200/60 dark:border-slate-800">
     <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-10 items-start">
-      <h2 class="text-2xl md:text-3xl font-black u">About</h2>
+      <h2 data-reveal class="text-2xl md:text-3xl font-black u">About</h2>
       <div class="md:col-span-2 text-slate-600 dark:text-slate-300 leading-relaxed">
         <p>I build reliable data platforms and elegant user experiences. Over 13 years, I’ve shipped mission‑critical pipelines across BFSI/telecom, mentored teams, and launched creative side projects—from game prototypes to screenwriting IPs. I’m currently deepening skills for Quant Data Engineering and GPU performance work.</p>
         <ul class="mt-4 grid sm:grid-cols-2 gap-2 text-sm">
@@ -120,9 +121,9 @@
   <!-- Experience -->
   <section id="experience" class="py-16 md:py-24">
     <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-2xl md:text-3xl font-black u">Experience</h2>
+      <h2 data-reveal class="text-2xl md:text-3xl font-black u">Experience</h2>
       <div class="mt-8 grid gap-4">
-        <div class="card rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
+        <div class="card reveal rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
           <div class="flex flex-wrap items-center justify-between gap-2">
             <h3 class="font-semibold">Principal Data Engineer · Freelance / Consulting</h3>
             <span class="text-xs px-2 py-1 rounded bg-slate-100 dark:bg-slate-800">2023–Present</span>
@@ -133,7 +134,7 @@
             <li>Mentored a 6‑person team; instituted code reviews and testing standards.</li>
           </ul>
         </div>
-        <div class="card rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
+        <div class="card reveal rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
           <div class="flex flex-wrap items-center justify-between gap-2">
             <h3 class="font-semibold">Senior Data Engineer · BFSI / Telecom</h3>
             <span class="text-xs px-2 py-1 rounded bg-slate-100 dark:bg-slate-800">2012–2023</span>
@@ -152,11 +153,11 @@
   <section id="projects" class="py-16 md:py-24 border-y border-slate-200/60 dark:border-slate-800">
     <div class="max-w-6xl mx-auto px-4">
       <div class="flex items-end justify-between gap-4">
-        <h2 class="text-2xl md:text-3xl font-black u">Projects</h2>
+        <h2 data-reveal class="text-2xl md:text-3xl font-black u">Projects</h2>
         <a href="#contact" class="text-sm hover:text-cyan-500">Work with me →</a>
       </div>
       <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <article class="card rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+        <article class="card reveal reveal rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
           <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=1200&auto=format&fit=crop" alt="Data pipelines" class="h-40 w-full object-cover" />
           <div class="p-5">
             <h3 class="font-semibold">AWS Lakehouse & Cost‑Smart ETL</h3>
@@ -164,7 +165,7 @@
             <div class="mt-3 flex flex-wrap gap-2 text-xs"><span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800">AWS</span><span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800">PySpark</span><span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800">Ab Initio</span></div>
           </div>
         </article>
-        <article class="card rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+        <article class="card reveal reveal rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
           <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop" alt="Snakes & Ladders 3D" class="h-40 w-full object-cover" />
           <div class="p-5">
             <h3 class="font-semibold">3D Snakes & Ladders Prototype</h3>
@@ -172,7 +173,7 @@
             <div class="mt-3 flex flex-wrap gap-2 text-xs"><span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800">Three.js</span><span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800">WebGL</span></div>
           </div>
         </article>
-        <article class="card rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+        <article class="card reveal reveal rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
           <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop" alt="Quant data engineering" class="h-40 w-full object-cover" />
           <div class="p-5">
             <h3 class="font-semibold">Quant Data Engineering Toolkit</h3>
@@ -180,7 +181,7 @@
             <div class="mt-3 flex flex-wrap gap-2 text-xs"><span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800">Python</span><span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800">Pandas</span><span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800">TA‑Lib</span></div>
           </div>
         </article>
-        <article class="card rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+        <article class="card reveal reveal rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
           <img src="https://images.unsplash.com/photo-1540132312156-1311d0e8b6dc?q=80&w=1200&auto=format&fit=crop" alt="YC alcohol monitoring" class="h-40 w-full object-cover" />
           <div class="p-5">
             <h3 class="font-semibold">AI Alcohol‑Influence Monitor</h3>
@@ -188,7 +189,7 @@
             <div class="mt-3 flex flex-wrap gap-2 text-xs"><span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800">AI</span><span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800">Signal Processing</span></div>
           </div>
         </article>
-        <article class="card rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+        <article class="card reveal reveal rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
           <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop" alt="T-shirt customizer" class="h-40 w-full object-cover" />
           <div class="p-5">
             <h3 class="font-semibold">T‑Shirt Design Web App</h3>
@@ -196,7 +197,7 @@
             <div class="mt-3 flex flex-wrap gap-2 text-xs"><span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800">React</span><span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800">Three.js</span></div>
           </div>
         </article>
-        <article class="card rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+        <article class="card reveal reveal rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
           <img src="https://images.unsplash.com/photo-1520975922284-1b347c64604b?q=80&w=1200&auto=format&fit=crop" alt="GPU perf" class="h-40 w-full object-cover" />
           <div class="p-5">
             <h3 class="font-semibold">GPU Performance Learning Track</h3>
@@ -211,9 +212,9 @@
   <!-- Skills -->
   <section id="skills" class="py-16 md:py-24">
     <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-2xl md:text-3xl font-black u">Skills</h2>
+      <h2 data-reveal class="text-2xl md:text-3xl font-black u">Skills</h2>
       <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div class="card rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
+        <div class="card reveal rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
           <h3 class="font-semibold">Data & Cloud</h3>
           <ul class="mt-2 text-sm text-slate-600 dark:text-slate-300 space-y-1">
             <li>Ab Initio, PySpark, Kafka</li>
@@ -221,7 +222,7 @@
             <li>Airflow/MWAA, Athena</li>
           </ul>
         </div>
-        <div class="card rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
+        <div class="card reveal rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
           <h3 class="font-semibold">Web & Apps</h3>
           <ul class="mt-2 text-sm text-slate-600 dark:text-slate-300 space-y-1">
             <li>React, Next.js, Tailwind</li>
@@ -229,7 +230,7 @@
             <li>Three.js, WebGL</li>
           </ul>
         </div>
-        <div class="card rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
+        <div class="card reveal rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
           <h3 class="font-semibold">Analytics</h3>
           <ul class="mt-2 text-sm text-slate-600 dark:text-slate-300 space-y-1">
             <li>Pandas, NumPy, Sci‑kit</li>
@@ -237,7 +238,7 @@
             <li>Experimentation, A/B</li>
           </ul>
         </div>
-        <div class="card rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
+        <div class="card reveal rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
           <h3 class="font-semibold">Ops & Quality</h3>
           <ul class="mt-2 text-sm text-slate-600 dark:text-slate-300 space-y-1">
             <li>CI/CD, Docker basics</li>
@@ -253,14 +254,14 @@
   <section id="contact" class="py-16 md:py-24 border-t border-slate-200/60 dark:border-slate-800">
     <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-start">
       <div>
-        <h2 class="text-2xl md:text-3xl font-black u">Contact</h2>
+        <h2 data-reveal class="text-2xl md:text-3xl font-black u">Contact</h2>
         <p class="mt-4 text-slate-600 dark:text-slate-300">Have an opportunity, idea, or question? Let’s talk.</p>
         <div class="mt-4 text-sm">
           <p>📧 <a class="underline hover:text-cyan-500" href="mailto:hello@example.com">hello@example.com</a></p>
           <p>📍 Chennai, India · IST (UTC+5:30)</p>
         </div>
       </div>
-      <form class="card rounded-2xl border border-slate-200 dark:border-slate-800 p-5 bg-white dark:bg-slate-900" action="mailto:hello@example.com" method="post" enctype="text/plain">
+      <form class="card reveal rounded-2xl border border-slate-200 dark:border-slate-800 p-5 bg-white dark:bg-slate-900" action="mailto:hello@example.com" method="post" enctype="text/plain">
         <div class="grid gap-4">
           <div>
             <label class="text-sm">Name</label>
@@ -282,17 +283,17 @@
   </section>
   <section id="writing" class="py-16 md:py-24 border-t border-slate-200/60 dark:border-slate-800">
     <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-10 items-start">
-      <h2 class="text-2xl md:text-3xl font-black u">Writing & World‑building</h2>
+      <h2 data-reveal class="text-2xl md:text-3xl font-black u">Writing & World‑building</h2>
       <div class="md:col-span-2 space-y-6 text-slate-600 dark:text-slate-300">
-        <div class="card rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
+        <div class="card reveal rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
           <h3 class="font-semibold">The Mandarium Chronicles (Trilogy)</h3>
           <p class="text-sm mt-2">Sci‑fi on a distant planet: Prodigals vs Primals unify under threat; Book 1 ends with reveal of a hidden third faction. Currently polishing Chapters 1–5 with deeper council lore (Timekeeper, OathKeeper), expanded cast, and slower, atmospheric pacing.</p>
         </div>
-        <div class="card rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
+        <div class="card reveal rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
           <h3 class="font-semibold">Tirupati Horror Series</h3>
           <p class="text-sm mt-2">A police officer uncovers murders tied to a predatory loan‑app cartel of city elites. Setting: small‑town India; tone: grounded dread.</p>
         </div>
-        <div class="card rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
+        <div class="card reveal rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
           <h3 class="font-semibold">Math Club & Kids Content</h3>
           <p class="text-sm mt-2">Designed place‑value riddles (4–6 digit), activity prompts, and puzzle sets for school club sessions.</p>
         </div>
@@ -302,7 +303,7 @@
 
   <section id="music" class="py-16 md:py-24">
     <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-10 items-start">
-      <h2 class="text-2xl md:3xl font-black u">Music & Audio</h2>
+      <h2 data-reveal class="text-2xl md:3xl font-black u">Music & Audio</h2>
       <div class="md:col-span-2 text-slate-600 dark:text-slate-300 space-y-4">
         <p>One‑man rock project — <strong>The Balded Rockstar</strong> — about midlife themes (35–45). BandLab setup; seeking remote collaborators for guitars/drums.</p>
         <ul class="text-sm list-disc pl-5 space-y-1">
@@ -315,7 +316,7 @@
 
   <section id="learning" class="py-16 md:py-24 border-y border-slate-200/60 dark:border-slate-800">
     <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-10 items-start">
-      <h2 class="text-2xl md:text-3xl font-black u">Learning & Fitness</h2>
+      <h2 data-reveal class="text-2xl md:text-3xl font-black u">Learning & Fitness</h2>
       <div class="md:col-span-2 text-slate-600 dark:text-slate-300 space-y-4">
         <p><strong>Career pivots:</strong> Quant Data Engineering and GPU performance (CUDA). Building structured roadmaps and test projects.</p>
         <p><strong>Sports & fitness:</strong> Working on cricket endurance/breathing and a steady path to a lean physique.</p>
@@ -350,6 +351,10 @@
       const url = 'resume.pdf'; // put resume file in same folder and rename
       window.location.href = url;
     });
+    // Scroll-reveal animations
+    const revealEls=[...document.querySelectorAll('.reveal'),...document.querySelectorAll('[data-reveal]')];
+    const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('reveal-show');io.unobserve(e.target);}})},{threshold:0.12,rootMargin:'0px 0px -60px 0px'});
+    revealEls.forEach(el=>io.observe(el));
   </script>
 </body>
 </html>
